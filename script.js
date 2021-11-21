@@ -1,10 +1,7 @@
-let node = document.getElementById("node")
 let button = document.getElementsByClassName("button")
-let nodesContainer = document.querySelector("#node")
-
-console.log(node)
-console.log(button)
-console.log(nodesContainer)
+let nodesContainer = document.querySelector("#area")
+let node = document.getElementById("container")
+let t = document.getElementById('target')
 
 function Node(id, title, description) {
     this.id = id;
@@ -29,24 +26,22 @@ function Node(id, title, description) {
     }]
 }
 
-let nodes = [];
-let relations = []
+let nodes = [node];
 
+const addNode = () => {
 
-const addNode = (e) => {
-    e.preventDefault();
-
-    if (nodes < 4) {
-        const newNode = document.createElement("div")
-        newNode.className = "container";
+    if (nodes.length < 5) {
+        const newNode = node.cloneNode(true);
         nodesContainer.appendChild(newNode);
         nodes.push(newNode)
     }
-
 }
 
+console.log(nodes)
 
 
+
+/*
 
 function setup() {
     for (let i = 0; i < 1; i++) {
@@ -68,7 +63,7 @@ function newNode() {
 
 function deleteNode() {
     circles.splice()
-}
+}*/
 
 
 

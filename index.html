@@ -10,27 +10,29 @@
 </head>
 
 <body>
-    <div id="node" class="container">
-        <div class="bigsquare">
-            <div class="starting-button">
-                <div class="button-container">
-                    <button class="button">
-                        <div class="one">1</div>
-                    </button>
-                    <button class="button">
-                        <div class="two">2</div>
-                    </button>
-                    <button class="button">
-                        <div class="three">3</div>
-                    </button>
-                    <button class="button">
-                        <div class="four">4</div>
-                    </button>
+    <div id="area">
+        <div id="container" class="container">
+            <div class="bigsquare">
+                <div class="starting-button">
+                    <div class="button-container">
+                        <button class="button" onclick="addNode()">
+                            <div class="one">1</div>
+                        </button>
+                        <button class="button" onclick="addNode()">
+                            <div class="two">2</div>
+                        </button>
+                        <button class="button" onclick="addNode()">
+                            <div class="three">3</div>
+                        </button>
+                        <button class="button" onclick="addNode()">
+                            <div class="four">4</div>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <button type="submit" class="delete-button">X</button>
+            <button type="button" class="edit-button" onClick={toggleModal}>E </button>
         </div>
-        <button type="submit" class="delete-button">X</button>
-        <button type="button" class="edit-button" onClick={toggleModal}>E </button>
     </div>
 </body>
 
