@@ -39,7 +39,7 @@ let button = document.querySelector("input").value
 
 
 
-const rootNode = new Node(id, title, description, button, connection, relationTitle)
+const rootNode = new Node(id, title, description, button)
 nodes.push(rootNode)
 
 
@@ -49,23 +49,24 @@ const nodeObjToString = JSON.stringify(rootNode)
 const toJSONNode = JSON.parse(nodeObjToString);
 console.log(toJSONNode.title)
 
-const addNode = () => {
+/*const addNode = () => {
     for (let i = 1; i < 5; i++) {
         nodes[i] = new Node()
     }
-}
+}*/
 
-function myFunction() {
+function addNode() {
     var x = document.getElementById("frm1");
     var value = "";
     var i;
     for (i = 0; i < x.length; i++) {
         value += x.elements[i].value + "<br>";
     }
-    const e = document.createElement('input');
-    e.className = "button";
+    const e = document.createElement('div');
+    e.className = "container";
     x.appendChild(e)
-    document.getElementsByClassName("button").innerHTML = value;
+    document.getElementsByClassName("container").innerHTML = value;
+    console.log(e)
+
 }
 
-console.log(nodes)
