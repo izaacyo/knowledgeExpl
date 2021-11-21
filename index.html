@@ -11,29 +11,31 @@
 
 <body>
     <div id="area">
-        <div id="circleId" class="container">
-            <div>
-                <label for="title" id="title"></label>
+        <form id="frm1">
+            <div id="circleId" class="container">
+                <div>
+                    <label for="title" id="title"></label>
 
-            </div>
-            <div>
-                <label for="description" id="description"></label>
+                </div>
+                <div>
+                    <label for="description" id="description"></label>
 
-            </div>
-            <div class="bigsquare">
-                <div class="starting-button">
-                    <div class="button-container">
-                        <input name="input" type="button" value="1" class="button" onclick="addNode()">
-                        <input name="input" type="button" value="2" class="button" onclick="addNode()">
-                        <input name="input" type="button" value="3" class="button" onclick="addNode()">
-                        <input name="input" type="button" value="4" class="button" onclick="addNode()">
+                </div>
+                <div class="bigsquare">
+                    <div class="starting-button">
+                        <div class="button-container">
+                            <input name="input" type="button" value="1" class="button" onclick="myFunction()">
+                            <input name="input" type="button" value="2" class="button" onclick="myFunction()()">
+                            <input name="input" type="button" value="3" class="button" onclick="myFunction()()">
+                            <input name="input" type="button" value="4" class="button" onclick="myFunction()()">
+                        </div>
                     </div>
                 </div>
+                <button type="submit" class="delete-button">X</button>
+                <button type="button" class="edit-button" onClick={toggleModal}>E </button>
             </div>
-            <button type="submit" class="delete-button">X</button>
-            <button type="button" class="edit-button" onClick={toggleModal}>E </button>
-        </div>
     </div>
+    </form>
 </body>
 
 <script src="jscript.js"></script>

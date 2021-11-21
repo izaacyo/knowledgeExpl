@@ -39,7 +39,7 @@ let button = document.querySelector("input").value
 
 
 
-const rootNode = new Node(1, "Slide A", "This is description for Slide A")
+const rootNode = new Node(id, title, description, button, connection, relationTitle)
 nodes.push(rootNode)
 
 
@@ -53,6 +53,19 @@ const addNode = () => {
     for (let i = 1; i < 5; i++) {
         nodes[i] = new Node()
     }
+}
+
+function myFunction() {
+    var x = document.getElementById("frm1");
+    var value = "";
+    var i;
+    for (i = 0; i < x.length; i++) {
+        value += x.elements[i].value + "<br>";
+    }
+    const e = document.createElement('input');
+    e.className = "button";
+    x.appendChild(e)
+    document.getElementsByClassName("button").innerHTML = value;
 }
 
 console.log(nodes)
