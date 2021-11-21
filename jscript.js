@@ -1,4 +1,4 @@
-let nodesContainer = document.querySelector("#area")
+//let nodesContainer = document.querySelector("#area")
 let container = document.getElementsByClassName("container")
 
 function Node(id, title, description, button, connection, relationTitle) {
@@ -43,7 +43,6 @@ const rootNode = new Node(id, title, description, button)
 nodes.push(rootNode)
 
 
-
 const nodeObjToString = JSON.stringify(rootNode)
 
 const toJSONNode = JSON.parse(nodeObjToString);
@@ -56,24 +55,22 @@ console.log(toJSONNode.title)
 }*/
 
 function addNode() {
-    let x = document.getElementById("frm1");
+    var x = document.getElementById("area");
     let value = "";
     let i;
 
-    for (i = 0; i < x.length; i++) {
-        value += x.elements[i].value + "<br>";
-    }
-    const e = document.createElement('div');
-
-    for (let i = 0; i < 5; i++) {
+    for (i = 0; i < nodes.length; i++) {
+        const e = document.createElement('div');
         e.id = "circleId"
         e.className = "container";
         x.appendChild(e)
         document.getElementsByClassName("container").innerHTML = value;
 
-        nodes[i] = new Node(e)
     }
 }
+
+
+
 
 console.log(nodes)
 
