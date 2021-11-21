@@ -56,17 +56,24 @@ console.log(toJSONNode.title)
 }*/
 
 function addNode() {
-    var x = document.getElementById("frm1");
-    var value = "";
-    var i;
+    let x = document.getElementById("frm1");
+    let value = "";
+    let i;
+
     for (i = 0; i < x.length; i++) {
         value += x.elements[i].value + "<br>";
     }
     const e = document.createElement('div');
-    e.className = "container";
-    x.appendChild(e)
-    document.getElementsByClassName("container").innerHTML = value;
-    console.log(e)
 
+    for (let i = 0; i < 5; i++) {
+        e.id = "circleId"
+        e.className = "container";
+        x.appendChild(e)
+        document.getElementsByClassName("container").innerHTML = value;
+
+        nodes[i] = new Node(e)
+    }
 }
+
+console.log(nodes)
 
